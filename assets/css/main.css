@@ -1376,3 +1376,33 @@ a:hover {
     order: unset !important;
   }
 }
+
+/* ==================================================
+   SECTION DIVIDER — CLEAN SINGLE LINE VERSION
+   (paste this at the VERY END of main.css)
+================================================== */
+
+/* 1) 기존 템플릿이 자동으로 만드는 모든 섹션 선 제거 */
+.wrapper {
+  border-bottom: none !important;
+}
+
+.wrapper > .inner.alt > * {
+  border-top: none !important;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+/* 2) 기본 hr 스타일 무력화 (혹시 남아있을 경우 대비) */
+hr {
+  border: 0 !important;
+  margin: 0 !important;
+}
+
+/* 3) 우리가 쓸 “유일한” 섹션 구분선 */
+hr.section-divider {
+  border: 0 !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.18) !important;
+  width: 100%;
+  margin: 5em 0 !important;
+}
