@@ -1406,3 +1406,38 @@ hr.section-divider {
   width: 100%;
   margin: 5em 0 !important;
 }
+/* ==================================================
+   FIX DOUBLE DIVIDER LINE (FINAL CLEAN)
+================================================== */
+
+/* 1) spotlight, section, article 자체에서 생기는 선 완전 제거 */
+section,
+article,
+.spotlight {
+  border: none !important;
+}
+
+/* 2) wrapper / main / inner에서 남아 있는 미세 border 제거 */
+#main,
+.wrapper,
+.wrapper > .inner,
+.wrapper > .inner > *,
+.wrapper > .inner.alt,
+.wrapper > .inner.alt > * {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 3) 우리가 만든 divider만 살린다 */
+hr.section-divider {
+  border: 0 !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.18) !important;
+  width: 100%;
+  margin: 5em 0 !important;
+}
+
+/* 4) 혹시 남아있는 기본 hr 전부 무력화 */
+hr:not(.section-divider) {
+  display: none !important;
+}
+
