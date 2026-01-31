@@ -4148,27 +4148,41 @@ input, select, textarea {
 		}
 
 	}
-/* === White background + dark gray text override === */
+/* =================================================
+   GLOBAL WHITE + DARK GRAY THEME (FULL OVERRIDE)
+   ================================================= */
 
-/* 1) 전체 배경 */
-html, body {
-  background: #ffffff !important;
+/* 1. 전체 배경 */
+html, body,
+.wrapper,
+#main,
+#footer,
+#header {
+  background-color: #ffffff !important;
+  background-image: none !important;
 }
 
-/* 2) 기본 글자색(전역) */
-body, input, select, textarea {
-  color: #333333 !important;   /* 짙은 회색 */
+/* 2. 전체 기본 텍스트 색 */
+body,
+input,
+select,
+textarea,
+p,
+li,
+span,
+blockquote {
+  color: #333333 !important;
 }
 
-/* 3) 제목/강조 텍스트 */
+/* 3. 제목 / 강조 텍스트 */
 h1, h2, h3, h4, h5, h6,
 strong, b,
 label,
 table th {
-  color: #222222 !important;   /* 조금 더 진하게 */
+  color: #222222 !important;
 }
 
-/* 4) 링크 (원하면 유지/변경 가능) */
+/* 4. 링크 */
 a {
   color: #333333 !important;
   border-bottom-color: #cccccc !important;
@@ -4177,12 +4191,53 @@ a:hover {
   color: #111111 !important;
 }
 
-/* 5) 아이콘도 너무 연하면 같이 */
+/* 5. 아이콘 */
 .icon {
   color: #555555 !important;
 }
 
-/* 6) 섹션/푸터 배경이 회색인 것들도 흰색으로 통일하고 싶으면 */
-.wrapper, #footer {
-  background-color: #ffffff !important;
+/* 6. 버튼 */
+.button,
+button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+  background-color: transparent !important;
+  color: #333333 !important;
+  box-shadow: inset 0 0 0 2px #dddddd !important;
+}
+.button:hover,
+button:hover {
+  background-color: #f2f2f2 !important;
+}
+
+/* 7. 헤더 텍스트 강제 통일 */
+#header h1,
+#header h2,
+#header p,
+#header a,
+#header strong {
+  color: #222222 !important;
+}
+
+/* 8. 폼 요소 */
+input,
+textarea,
+select {
+  background-color: #f7f7f7 !important;
+  border-color: #dddddd !important;
+  color: #333333 !important;
+}
+
+/* 9. 테이블 */
+table tbody tr {
+  border-color: #e0e0e0 !important;
+}
+table tbody tr:nth-child(2n + 1) {
+  background-color: #f8f8f8 !important;
+}
+
+/* 10. 이미지 테두리 */
+.image {
+  box-shadow: 0 0 0 4px #ffffff, 0 0 0 5px #dddddd !important;
 }
