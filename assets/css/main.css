@@ -4,6 +4,7 @@
 	Fractal by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
 */
 
 html, body, div, span, applet, object,
@@ -4147,3 +4148,86 @@ input, select, textarea {
 		}
 
 	}
+
+/* =========================
+   Centered layout + width cap
+   (Rinseo-like header layout)
+   ========================= */
+
+/* 1) 화면 가운데 '컨테이너' 폭 제한 */
+#header {
+  height: auto;        /* 100vh 제거 */
+  min-height: 0;
+  padding: 6rem 1.5rem 5rem 1.5rem;  /* 좌우 패딩 + 위아래 여백 */
+  background-attachment: scroll, scroll; /* fixed 때문에 어색하면 scroll로 */
+}
+
+/* 2) header 안의 두 컬럼(텍스트/이미지)을 가운데 정렬 + max-width */
+#header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header .content,
+#header .image {
+  transform: none !important; /* preload 애니메이션 영향 줄이기 */
+}
+
+/* 실제 컨테이너 역할: header 내부 두 요소가 한 덩어리처럼 보이게 */
+#header .content {
+  text-align: left;     /* 오른쪽 정렬 → 왼쪽 정렬 */
+  margin: 0;            /* 기본의 -3.5em 4em 0 0 제거 */
+  max-width: 520px;     /* 텍스트 컬럼 폭 */
+}
+
+#header .image {
+  margin: 0;            /* 기본 마진 제거 */
+}
+
+/* header 안에 있는 두 요소를 묶어서 폭 제한하려고,
+   header에 직접 max-width를 주고 양쪽 요소를 gap으로 띄움 */
+#header {
+  gap: 4rem;
+  width: 100%;
+  max-width: 1050px;    /* <- 여기서 “전체 덩어리 폭”이 결정됨 */
+  margin: 0 auto;
+}
+
+/* 3) 제목/본문 느낌을 rinseopark처럼 깔끔하게 */
+#header h1 {
+  font-weight: 500;     /* 너무 굵으면 400~600 사이로 조절 */
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+#header p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+}
+
+/* 4) 폰 이미지(오른쪽) 크기 조절 */
+#header .image.phone {
+  width: 16.5em;  /* 기본 13em보다 조금 크게 */
+}
+
+/* 5) 모바일에서는 세로로 쌓이게 */
+@media screen and (max-width: 980px) {
+  #header {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 4rem 1.25rem 3rem 1.25rem;
+  }
+
+  #header .content {
+    max-width: 640px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  #header .image.phone {
+    width: 14em;
+  }
+}
