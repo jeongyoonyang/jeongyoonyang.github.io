@@ -1970,7 +1970,7 @@ input, select, textarea {
 		button.primary,
 		.button.primary {
 			box-shadow: none;
-			background-color: #4696e5;
+			background-color: #ffffff;
 			color: #ffffff !important;
 		}
 
@@ -2175,7 +2175,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #4696e5;
+			border-color: #ffffff;
 			box-shadow: 0 0 0 1px #4696e5;
 		}
 
@@ -4149,4 +4149,5 @@ input, select, textarea {
 		}
 
 	}
+
 
