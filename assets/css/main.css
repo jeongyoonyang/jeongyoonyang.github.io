@@ -1225,3 +1225,45 @@ a:hover {
   border-radius: 100% !important;
   border: solid 2px rgba(0,0,0,0.22) !important;
 }
+
+/* ===== Header layout fixes (Rinseo-like) ===== */
+#header { position: relative; }
+
+#header .content {
+  text-align: left !important;
+  margin: 0 4em 0 0 !important;
+  max-width: 42rem;
+}
+
+#header .content p { max-width: 62ch; }
+
+#header .image.phone {
+  width: 22em !important;
+  max-width: 34vw !important;
+  margin: 0 !important;
+}
+
+#header .image.phone img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover;
+}
+
+#header:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: min(72rem, calc(100% - 6rem));
+  border-bottom: 1px solid rgba(0,0,0,0.14);
+}
+
+@media screen and (max-width: 736px) {
+  #header .content { margin: 0 0 2em 0 !important; }
+  #header .image.phone {
+    width: 16em !important;
+    max-width: 70vw !important;
+  }
+}
+
