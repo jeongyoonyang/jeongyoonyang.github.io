@@ -4241,3 +4241,18 @@ table tbody tr:nth-child(2n + 1) {
 .image {
   box-shadow: 0 0 0 4px #ffffff, 0 0 0 5px #dddddd !important;
 }
+/* === REMOVE iPHONE FRAME COMPLETELY === */
+.image.phone,
+.image.phone * {
+  all: unset;
+}
+
+.image.phone img {
+  display: block;
+  width: 100%;
+  max-width: 320px;   /* 필요하면 조절 */
+  margin: 0 auto;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
