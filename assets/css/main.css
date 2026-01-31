@@ -1304,3 +1304,75 @@ a:hover {
   pointer-events: none;
 }
 
+/* =========================
+     Research section
+========================= */
+
+.spotlight {
+  display: grid !important;
+  grid-template-columns: 1.1fr 1.4fr; /* 이미지 : 텍스트 */
+  gap: 4rem;
+  align-items: center;
+  margin: 5rem 0;
+}
+
+/* 이미지: 원형 제거 → 직사각형 */
+.spotlight .image {
+  width: 100% !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.spotlight .image img {
+  width: 100%;
+  height: auto;
+  border-radius: 0 !important;
+}
+
+/* 텍스트 */
+.spotlight .content {
+  width: 100% !important;
+  text-align: left !important;
+}
+
+.spotlight h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.spotlight p {
+  max-width: 60ch;
+  line-height: 1.65;
+}
+
+/* 짝수 섹션은 좌우 반전 */
+.spotlight:nth-of-type(even) {
+  grid-template-columns: 1.4fr 1.1fr;
+}
+
+.spotlight:nth-of-type(even) .image {
+  order: 2;
+}
+
+.spotlight:nth-of-type(even) .content {
+  order: 1;
+}
+
+.spotlight:after {
+  content: "";
+  display: block;
+  grid-column: 1 / -1;
+  margin-top: 4rem;
+  border-bottom: 1px solid rgba(0,0,0,0.12);
+}
+
+@media screen and (max-width: 768px) {
+  .spotlight {
+    grid-template-columns: 1fr !important;
+  }
+
+  .spotlight .image,
+  .spotlight .content {
+    order: unset !important;
+  }
+}
