@@ -1226,7 +1226,7 @@ a:hover {
   border: solid 2px rgba(0,0,0,0.22) !important;
 }
 
-/* ===== Header layout fixes (Rinseo-like) ===== */
+/* ===== Header layout fixes ===== */
 #header { position: relative; }
 
 #header .content {
@@ -1265,5 +1265,42 @@ a:hover {
     width: 16em !important;
     max-width: 70vw !important;
   }
+}
+
+/* ===== header container ===== */
+#header {
+  justify-content: center !important;
+}
+
+#header {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+#header .content {
+  text-align: left !important;
+  margin: 0 !important;
+  max-width: 42rem !important;
+}
+
+#header .image.phone {
+  margin: 0 0 0 5rem !important;
+  width: 20em !important;
+  max-width: 32vw !important;
+}
+
+/* 전체가 너무 벌어지지 않게 '가상의 컨테이너' 폭 제한 */
+#header {
+  gap: 0 !important;
+}
+#header:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: min(80rem, calc(100% - 6rem));
+  height: 100%;
+  pointer-events: none;
 }
 
