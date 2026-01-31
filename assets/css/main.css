@@ -1121,3 +1121,107 @@ body.is-preload #header .image img { opacity: 0; }
 @media screen and (max-width: 736px) and (orientation: portrait) {
   #footer { padding: 3em 1.5em 1em 1.5em; }
 }
+
+/* =========================
+   HOTFIX: force white bg + black text + restore phone frame
+   (paste at the VERY END of main.css)
+========================= */
+
+/* 1) 전체 글자색을 확실히 검정으로 고정 */
+body, #main, #footer, .wrapper, .wrapper .inner, section, article {
+  background: #fff !important;
+  color: #111 !important;
+}
+
+p, li, dd, dt, span, small, strong, em, b,
+h1, h2, h3, h4, h5, h6,
+label, input, textarea, select {
+  color: #111 !important;
+}
+
+/* 2) 링크는 검정 + 점선 밑줄 */
+a {
+  color: #111 !important;
+  border-bottom: dotted 1px rgba(0,0,0,0.7) !important;
+}
+a:hover {
+  color: #000 !important;
+  border-bottom-color: transparent !important;
+}
+
+/* 3) 헤더(첫 화면)도 흰 배경 + 검정 글씨로 */
+#header {
+  background: #fff !important;
+  color: #111 !important;
+}
+#header h1, #header h2, #header h3, #header p,
+#header a, #header strong {
+  color: #111 !important;
+}
+
+/* 4) (중요) Fractal 아이폰 프레임이 사라질 때 복구용 */
+.image.phone {
+  position: relative !important;
+  display: inline-block !important;
+  width: 13em !important;            /* 원하면 14~16em으로 키워도 됨 */
+  margin: 0 0 3em 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+.image.phone:before,
+.image.phone:after,
+.image.phone .inner {
+  content: "" !important;
+  display: block !important;
+  border: solid 2px rgba(0,0,0,0.22) !important;
+}
+
+.image.phone:before {
+  height: 2.5em !important;
+  border-radius: 1em 1em 0 0 !important;
+  border-bottom: 0 !important;
+}
+
+.image.phone:after {
+  height: 3.5em !important;
+  border-radius: 0 0 1em 1em !important;
+  border-top: 0 !important;
+}
+
+.image.phone .inner {
+  position: relative !important;
+}
+
+.image.phone img {
+  display: block !important;
+  width: 100% !important;
+  border-radius: 0 !important;
+}
+
+/* 상단 스피커/하단 홈버튼 (프레임 디테일) */
+.image.phone .inner:before,
+.image.phone .inner:after {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+.image.phone .inner:before {
+  top: -1.375em !important;
+  width: 2em !important;
+  height: 0.25em !important;
+  border-radius: 0.5em !important;
+  background: rgba(0,0,0,0.22) !important;
+}
+
+.image.phone .inner:after {
+  bottom: -2.75em !important;
+  width: 2em !important;
+  height: 2em !important;
+  border-radius: 100% !important;
+  border: solid 2px rgba(0,0,0,0.22) !important;
+}
