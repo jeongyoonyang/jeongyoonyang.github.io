@@ -1,0 +1,30 @@
+<head>
+	<title>{{ .Site.Title }}</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="">
+	<meta name="author" content="">
+	{{ if .Site.Params.favicon }}
+	{{ partial "favicon" }}
+	{{ end }}
+
+	<!-- CSS (Hugo Pipes) -->
+	{{ $style := resources.Get "sass/main.scss"
+		| resources.ExecuteAsTemplate "scss/main.scss" .
+		| toCSS (dict "targetPath" "css/main.min.css" "enableSourceMap" false "outputStyle" "compressed")
+		| fingerprint
+	}}
+	<link rel="stylesheet" href="{{ $style.Permalink }}">
+
+	{{ $noscript := resources.Get "sass/noscript.scss"
+		| resources.ExecuteAsTemplate "noscript.scss" .
+		| toCSS (dict "targetPath" "css/noscript.min.css" "enableSourceMap" false "outputStyle" "compressed")
+		| fingerprint
+	}}
+	<noscript><link rel="stylesheet" href="{{ $noscript.Permalink }}"></noscript>
+
+	<!-- FontAwesome CSS -->
+	{{ range .Site.Params.asset.fontawesome_css -}}
+		<link rel="stylesheet" href="{{ . | absURL }}">
+	{{- end }}
+</head>

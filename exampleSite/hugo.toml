@@ -1,0 +1,30 @@
+## -----------------------------------------------
+## Basic Configuration
+## -----------------------------------------------
+
+theme = "hugo-story"
+
+## -----------------------------------------------
+## Publish
+## -----------------------------------------------
+
+relativeURLs = false
+canonifyURLs = true
+
+baseURL = "https://jeongyoonyang.github.io/hugo-story/"
+publishDir = "public"
+
+## -----------------------------------------------
+## Hugo Built-in Features
+## -----------------------------------------------
+
+disableKinds = ["taxonomy", "section"]
+# googleAnalytics = "your-google-analytics-id"
+
+## -----------------------------------------------
+## Site Parameters
+## -----------------------------------------------
+
+[Params]
+
+[Params.social]
