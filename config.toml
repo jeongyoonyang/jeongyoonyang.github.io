@@ -4,10 +4,8 @@ title = "My Portfolio"
 
 theme = "hugo-story"
 
-# 사이트 폴더를 exampleSite로 지정
-contentDir = "exampleSite/content"
-staticDir  = "exampleSite/static"
-layoutDir  = "exampleSite/layouts"
-dataDir    = "exampleSite/data"
-archetypeDir = "exampleSite/archetypes"
-publishDir = "docs"
+contentDir    = "exampleSite/content"
+staticDir     = "exampleSite/static"
+layoutDir     = "exampleSite/layouts"
+dataDir       = "exampleSite/data"
+archetypeDir  = "exampleSite/archetypes"
