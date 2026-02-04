@@ -4,25 +4,25 @@ content: |
   This is a <strong>Gallery</strong> element. It can behave as a lightbox (when given the <code>lightbox</code> class), and you can customize its <span class="demo-controls">appearance with a number of modifiers</span>, as well as assign it an optional <code>onload</code> or <code>onscroll</code> transition modifier (<a href="#reference-gallery">details</a>).
 pictures:
   - title: "Books"
-    content: "Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices."
+    content: "Through books and my work in the library, I developed a strong understanding of the importance of text and language."
     image: "images/gallery/fulls/books.jpg"
     thumb: "images/gallery/thumbs/books.jpg"
     button: "Details"
 
   - title: "Life in Seattle"
-    content: "Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices."
+    content: "with its beautiful natural surroundings, has deepened my gratitude for the simple moments I get to experience."
     image: "images/gallery/fulls/mtrainier.jpg"
     thumb: "images/gallery/thumbs/mtrainier.jpg"
     button: "Details"
 
-  - title: "Drawing"
-    content: "Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices."
-    image: "images/gallery/fulls/eyedrawing.jpg"
-    thumb: "images/gallery/thumbs/eyedrawing.jpg"
+  - title: "Photography"
+    content: "Taking aesthetic photos is my favorite hobby, and this was taken at the UW fountain."
+    image: "images/gallery/fulls/ducks.jpg"
+    thumb: "images/gallery/thumbs/ducks.jpg"
     button: "Details"
 
   - title: "Basketball"
-    content: "Lorem ipsum dolor amet, consectetur magna etiam elit. Etiam sed ultrices."
+    content: "Playing and watching basketball has been a big part of my life and has helped define who I am today."
     image: "images/gallery/fulls/basketball.jpg"
     thumb: "images/gallery/thumbs/basketall.jpg"
     button: "Details"
