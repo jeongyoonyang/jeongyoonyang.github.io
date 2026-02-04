@@ -7,29 +7,11 @@
             <li><a target="_blank" href="https://github.com/jeongyoonyang" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
         </ul>
 
-    <p>© 2026 Jeongyoon Yang (Jenny). All rights reserved.</p>
+    <p>© 2026 Jeongyoon Yang. All rights reserved.</p>
   </div>
 </footer>
 
 <!-- FontAwesome JS -->
 {{ range .Site.Params.asset.fontawesome_js -}}
   <script type="text/javascript" src="{{ . | absURL }}"></script>
-{{- end }}
-
-        
-        
-        
-        
-        
-        
-        
-        
-$$       
-        <p>© 2026 Jeongyoon Yang. All rights reserved.</p>
-</div>
-</footer>
-
-<!-- FontAwesome JS -->
-{{ range .Site.Params.asset.fontawesome_js -}}
-    <script type="text/javascript" src="{{ . | absURL }}"></script>
 {{- end }}
