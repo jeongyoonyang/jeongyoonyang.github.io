@@ -7,6 +7,8 @@ content : |
   Hello! I’m Jeongyoon — you can call me <strong>Jenny</strong>. I’m a first-year master’s student in Communication at <a target="_blank" href="https://devcms.yonsei.ac.kr/mcc/index.do">Yonsei University</a>.
   <br>My research focuses on how polarization shapes academic knowledge and how inclusive research practices can foster better understanding. 
   <br>I earned a double B.A. in Communication and Education Studies - Research and Policy from the University of Washington, Seattle.
-  <br><br>Through my international experiences, I have developed a strong interest in multiculturalism and how people from diverse backgrounds communicate and learn from one another.
+  <br><br><ul class="icons"><li><a class="icon style2 fa-envelope" href="mailto:jenyyunyang@gmail.com" target="_self"></a></li>
+  <li><a class="icon style2 brands fa-linkedin" target="_blank" href="https://www.linkedin.com/in/jeongyoonyang"></a></li>
+  <li><a class="icon style2 brands fa-github" target="_blank" href="https://github.com/jeongyoonyang"></a></li></ul>
 image : "images/banner.jpg"
 
