@@ -3,10 +3,10 @@ style: "style1 medium lightbox onscroll-fade-in"
 content: |
   These are some of the things that I like! Outside of the research, I love films (<em>mostly</em> comedy), art (<em>mostly</em> photography and drawing), music (<em>mostly</em> Alt pop, R&B, Indie), and basketball. Please feel free to connect with me if you enjoy too!
 
-<ul class="icons">
-  <li><a class="icon brands style2 fa-instagram" target="_blank" href="https://www.instagram.com/jenynfur/"></a></li>
-  <li><a class="icon brands style2 fa-camera" target="_blank" href="https://vs.co/36z4wubc"></a></li>
-</ul>
+  <ul class="icons">
+    <li><a class="icon brands style2 fa-instagram" target="_blank" href="https://www.instagram.com/jenynfur/"></a></li>
+    <li><a class="icon brands style2 fa-camera" target="_blank" href="https://vs.co/36z4wubc"></a></li>
+  </ul>
 
 pictures:
   - title: "Books"
