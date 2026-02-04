@@ -2,13 +2,29 @@
 <footer class="wrapper style1 align-center">
     <div class="inner">
         <ul class="icons">
-            {{ with .Site.Params.social.github }}<li><a target="_blank" href="{{.}}" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>{{end}}
-            {{ with .Site.Params.social.twitter }}<li><a target="_blank" href="{{.}}" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>{{end}}
-            {{ with .Site.Params.social.bluesky }}<li><a target="_blank" href="{{.}}" class="icon brands style2 fa-bluesky"><span class="label">bluesky</span></a></li>{{end}}
-            {{ with .Site.Params.social.instagram }}<li><a target="_blank" href="{{.}}" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>{{end}}
-            {{ with .Site.Params.social.linkedin }}<li><a target="_blank" href="{{.}}" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>{{end}}
-            {{ with .Site.Params.social.email }}<li><a target="_blank" href="mailto:{{.}}" class="fav icon style2 fa-envelope"><span class="label">Email</span></a></li>{{end}}
+            <li><a href="mailto:jenyyunyang@gmail.com" class="icon style2 fa-envelope"><span class="label">Email</span></a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/jeongyoonyang" class="icon brands style2 fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            <li><a target="_blank" href="https://github.com/jeongyoonyang" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
         </ul>
+
+    <p>© 2026 Jeongyoon Yang (Jenny). All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- FontAwesome JS -->
+{{ range .Site.Params.asset.fontawesome_js -}}
+  <script type="text/javascript" src="{{ . | absURL }}"></script>
+{{- end }}
+
+        
+        
+        
+        
+        
+        
+        
+        
+$$       
         <p>© 2026 Jeongyoon Yang. All rights reserved.</p>
 </div>
 </footer>
